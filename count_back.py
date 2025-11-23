@@ -1,20 +1,15 @@
-def count_back():
+while True:
     try:
-        get_number = int(input("Введите число: "))
+        number = int(input("Введите число: "))
     except ValueError:
-        print("Введено не число, введите число!")
-        return count_back()
-    if get_number < 0:
         print("Введите целое положительное число!")
-        return count_back()
+        continue
+
+    if number < 0:
+        print("Введите целое положительное число!")
     else:
-        while True:
-            if get_number > -1:
-                print("Счетчик: ", get_number)
-                get_number -= 1
-            if get_number == -1:
-                break
+        while number >= 0:
+            print(number)
+            number -= 1
 
-
-count_back()
 
