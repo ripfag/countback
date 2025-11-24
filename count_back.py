@@ -1,15 +1,18 @@
 while True:
     try:
         number = int(input("Введите число: "))
+        if number > 0:
+            break
+        else:
+            print("Введите целое положительное число!")
     except ValueError:
         print("Введите целое положительное число!")
-        continue
 
-    if number < 0:
-        print("Введите целое положительное число!")
-    else:
-        while number >= 0:
-            print(number)
-            number -= 1
+
+while number >= 0:
+    print(number)
+    number -= 1
+
+
 
 
